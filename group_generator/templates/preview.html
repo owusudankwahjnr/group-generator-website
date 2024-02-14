@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='preview.css')}}">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="navbar">
+	<nav>
+		<ul class="ul">
+			<li class="li">
+				<a href="{{url_for('views.home')}}"  class="a">PUPIL SORTER </a>
+			</li>
+			<li class="li">
+				<a href="{{url_for('views.generate_groups')}}" class="a"> REGENERATE</a>
+			</li>
+			<li class="li">
+				<a href="{{url_for('views.home')}}" class="a"> HOME </a>
+			</li>
+		</ul>
+	</nav>
+ </div>
+{%for group_name, group_members in sub_groups.items() %}
+<div class="t11">
+
+	<table>
+		<tr>
+			<th class="head">
+				<h1>{{group_name}}</h1>
+				<br>
+			</th>
+			{% for member in group_members %}
+			<tr>
+				<td>
+					<ul>
+						<li>
+							{{member}}
+						</li>
+					</ul>
+
+				</td>
+			</tr>
+			{% endfor %}
+		</tr>
+   </table>
+</div>
+ {% endfor %}
+
+</body>
+</html>

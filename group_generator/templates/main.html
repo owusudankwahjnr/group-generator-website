@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
+
+</head>
+<body>
+   
+ <div class="navbar">
+    <nav>
+        <h2 class="logo"> PUPIL SORTER</h2>
+    </nav>
+ </div>
+
+ <form method="POST" enctype="multipart/form-data">
+        <fieldset>
+            <div class="cl">
+
+                {{form.hidden_tag()}}
+                {{form.text_area(placeholder="Enter names you want to group, separating each name with a ',' or upload a .xlsx file containing names:")}}
+                {{form.file(class="fil", required="true", accept=".xlsx")}}
+
+                {{form.group_by(class="sel")}}
+
+                {{form.number(class="num", placeholder="Enter Number", required="true", min="2")}}
+
+                {{form.submit(class="button")}}
+          </div>
+        </fieldset>
+
+        
+
+    
+ </form>
+
+    
+   
+</body>
+</html>

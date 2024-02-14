@@ -1,0 +1,165 @@
+
+body{
+    background-color:black;
+    margin: 0%;
+    background-image: url("/static/images/backgroundImage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+nav{
+    width: 100%;
+    text-align: center;
+}
+
+.logo{
+    font-size:6.5rem;
+    color: white;
+    font-family: 'Protest Revolution', sans-serif;
+}
+
+fieldset{
+    position:absolute;
+    left: 30%;
+    top: 30%;
+    width: 30%;
+    border: 0px;
+    border-radius: 10px;
+    height: 40%;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-size: 2rem;
+    border: solid 2px rgb(11, 144, 11);
+    box-shadow:0.04px 0.04px 8px #888888;
+}
+
+label{
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    font-family: 'Lora', serif;
+}
+textarea{
+    position: relative;
+    top: 15px;
+    resize: none;
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 5px;
+    border: solid 2px rgb(11, 144, 11);
+    box-shadow:0.04px 0.04px 8px #888888;
+}
+
+.fil{
+    position: absolute;
+    left: 12%;
+    bottom: 60%;
+
+}
+
+.sel{
+    font-size: 1.5rem;
+    box-shadow:0.04px 0.04px 10px #888888;
+    position: absolute;
+    left: 21%;
+    bottom: 45%;
+    border-radius: 10px;
+}
+.num{
+    position: absolute;
+    left:26%;
+    bottom: 30%;
+    text-align: center;
+}
+
+.t11{
+    display:inline-flex;
+    position:relative;
+    left:40px;
+    background:
+}
+
+table{
+    margin:30px;
+    width: 280px;
+    text-align: left;
+    text-transform: uppercase;
+}
+input{
+    font-size: 1.5rem;
+    color: rgb(42, 82, 44);
+    font-family: 'Lora', serif;
+    border-radius: 10px;
+    box-shadow:0.04px 0.04px 10px #888888;
+
+}
+
+
+.button{
+   font-size: 1.2rem;
+   border-radius: 50px;
+   width: 180px;
+   border: solid 2px rgb(11, 144, 11);
+   background-color: rgba(255, 228, 196, 0);
+   padding: 5px;
+   position: absolute;
+   left: 34%;
+   bottom: 10%;
+}
+
+.button:hover{
+    background-color: white;
+    box-shadow:1px 1px 20px #888888;
+    width:185px;
+
+}
+
+
+
+
+table{
+    background-color: aliceblue;
+    font-size: 15px;
+}
+
+
+
+@media (max-width:1440px){
+    fieldset{
+        height:45%;
+    }
+    a{
+        bottom: 10%;
+        width: 130px;
+    }
+}
+
+
+@media  (max-width:1024px){
+    a {
+        width: 130px;
+        bottom: 15%;
+    }
+    .logo{
+        font-size: 5.5rem;
+    }
+    fieldset{
+        width: 12%;
+        left: 30%;
+        height: 35%;
+    }
+    label{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:768px){
+    fieldset{
+        left: 22%;
+    }
+    label{
+        font-size: 1.5rem;
+    }
+
+
+
+
+
