@@ -4,21 +4,18 @@ import pandas as pd
 
 class CreateGroupsFromCSV:
 
-    # def __init__(self):
-    #     self.use_num_of_groups: bool = False
-    #     self.use_num_of_people_in_group: bool = True
 
     @staticmethod
     def convert_csv_or_xlsx_to_list(file_path: str):
         df = pd.read_excel(file_path)
         file_to_dict = df.to_dict()
-        # print(file_to_dict)
         a_list = []
+
         for key in file_to_dict:
 
             for index in file_to_dict[key]:
                 a_list.append(file_to_dict[key][index])
-        print(a_list)
+                
         return a_list
 
     @staticmethod
@@ -70,14 +67,12 @@ class CreateGroupsFromCSV:
             else:
                 dict_for_groupings[group_name] = []
                 for num in range(num_of_members_in_group):
-                    # print(num_of_members_in_group)
                     member = csv_list.pop(csv_list.index(random.choice(csv_list)))
                     dict_for_groupings[group_name].append(member)
 
 
             group_num += 1
 
-        print(dict_for_groupings)
         return dict_for_groupings
 
     @staticmethod

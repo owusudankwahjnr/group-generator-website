@@ -74,7 +74,7 @@ textarea{
     display:inline-flex;
     position:relative;
     left:40px;
-    background:
+    background: none
 }
 
 table{
@@ -158,8 +158,4 @@ table{
     label{
         font-size: 1.5rem;
     }
-
-
-
-
-
+}
