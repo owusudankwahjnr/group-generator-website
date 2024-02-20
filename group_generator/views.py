@@ -1,9 +1,12 @@
+import pathlib
+
 from flask import Blueprint, Flask, render_template, request, redirect, url_for
 from .create_group import CreateGroupsFromCSV
 from flask_wtf import FlaskForm
 from wtforms import FileField, SubmitField, SelectField, IntegerField, TextAreaField
 from werkzeug.utils import secure_filename
 import os
+
 
 
 app = Flask(__name__)
@@ -63,3 +66,9 @@ def generate_groups():
         sub_groups = group.using_num_of_people_in_groups(general_group_list, group_total)
 
     return render_template("preview.html", sub_groups=sub_groups)
+
+
+
+
+
+
